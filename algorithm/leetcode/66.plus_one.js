@@ -1,0 +1,15 @@
+var plusOne = function(digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        if (digits[i] < 9) {
+            digits[i] = digits[i] + 1
+            return digits
+        } else {
+            digits[i] = 0
+        }
+    }
+    // unshift是为了测试用例[9]/[9,9,9]这种列出的情况
+    digits.unshift(1)
+    return digits 
+};
+
+console.log(plusOne([9,9,9]));
